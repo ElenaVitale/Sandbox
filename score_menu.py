@@ -18,43 +18,51 @@ In main(), before the menu loop, get a valid score using your function.
 When the user quits, say some kind of "farewell".
 """
 
-menu = """(G)et a valid score (must be 0-100 inclusive)
+def main():
+    menu = """(G)et a valid score (must be 0-100 inclusive)
 (P)rint result (copy or import your function to determine the result from score.py)
 (S)how stars (this should print as many stars as the score)
 (Q)uit"""
 
-choice = input("Select option from menu: ").upper()
-while choice != "Q":
-    if choice == "G":
-        # (G)et a valid score (must be 0-100 inclusive)
+    print(menu)
+    choice = input("Select option from menu: ").upper()
+    score = 0
+    while choice != "Q":
+        if choice == "G":
+            # (G)et a valid score (must be 0-100 inclusive)
+            score = get_score()
 
-        pass
+        elif choice == "P":
+            # (P)rint result (copy or import your function to determine the result from score.py)
+            print_result(score)
 
-    elif choice == "F":
-        # (P)rint result (copy or import your function to determine the result from score.py)
-        pass
+        elif choice == "S":
+            # (S)how stars (this should print as many stars as the score)
+            show_stars(score)
 
-    elif choice == "S":
-        # (S)how stars (this should print as many stars as the score)
-        pass
-
-    else:
-        print("Invalid option")
+        else:
+            print("Invalid option")
         print(menu)
         choice = input("Select option from menu: ").upper()
-print("Thank you, Farewell.")
-# display menu
-# get choice
-# while choice != <quit option>
-#     if choice == <first option>
-#         <do first task>
-#     else if choice == <second option>
-#         <do second task>
-#     ...
-#     else if choice == <n-th option>
-#         <do n-th task>
-#     else
-#         display invalid input error message
-#     display menu
-#     get choice
-# <do final thing, if needed>
+    print("Thank you, Farewell.")
+
+
+def get_score():
+    score = int(input("Enter score: "))
+    while score < 0 or score > 100:
+        print("Invalid score")
+        score = float(input("Enter score: "))
+    return score
+
+def print_result(score):
+    if score > 90:
+        print("Excellent")
+    elif score > 49:
+        print("Passable")
+    else:
+        print("Fail")
+
+def show_stars(score):
+    print("*" * score)
+
+main()
