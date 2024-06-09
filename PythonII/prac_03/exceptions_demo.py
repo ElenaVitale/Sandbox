@@ -10,6 +10,7 @@ I've broken down the program into a number of elements with loops.
 Used 'while True' loop to keep asking the user until they enter the correct information.
 Try & Except for each user input.
 Break exits the loop, couldn't get it to work with it.
+Move the fraction calculation to inside the while try try loop.
 """
 while True:
 
@@ -23,15 +24,13 @@ while True:
 
     try:
         denominator = int(input("Enter the denominator: "))
-        if denominator == 0:
-            print("Denominator can't be zero! Please enter a valid number.")
-        else:
-            break
+        fraction = numerator / denominator
+        break
     except ValueError:
         print("Denominator must be a valid number.")
+    except ZeroDivisionError:
+        print("Zero denominator. Enter a valid digit")
 
-
-fraction = numerator / denominator
 print(fraction)
 print("Finished.")
 
