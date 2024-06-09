@@ -58,3 +58,26 @@ Good Design
 #     print(name)
 # print("Completed")
 
+# valid_input = False
+# while not valid_input:
+#     try:
+#         age = int(input("Age: "))
+#         valid_input = True
+#     except ValueError:
+#         print("Invalid (not an integer)")
+# print("Next year you will be", age + 1)
+
+#Convert a string to an integer
+# def convert_str_to_int(text):
+#     """ LBYL version"""
+#     if not isinstance(text, str) or not text.isdigit():
+#         return None
+#     else:
+#         return int(text)
+#
+# def convert_str_to_int(text):
+#     """EAFP version"""
+#     try:
+#         return int(text)
+#     except ValueError:
+#         return None
