@@ -37,3 +37,5 @@ while MIN_PRICE <= price <= MAX_PRICE:
 
 out_file = open('c_conrad', 'w')
 print(f"Final price is: ${price:,.2f}", file=out_file)
+out_file.close()
+
