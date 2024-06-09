@@ -4,9 +4,9 @@ Password checker "skeleton" code to help you get started
 
 """
 
-MIN_LENGTH = 5
-MAX_LENGTH = 15
-IS_SPECIAL_CHARACTER_REQUIRED = True # True or false to use special characters
+MIN_LENGTH = 2
+MAX_LENGTH = 6
+IS_SPECIAL_CHARACTER_REQUIRED = False # True or false to use special characters
 SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
 
 def main():
