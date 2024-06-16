@@ -13,5 +13,11 @@ Your code should produce output that matches this sample output
 (except the numbers are random):
 """
 
+import random
+
+
+quick_pick = []
+
 number_of_picks = int(input("How many quick picks? "))
+print(number_of_picks)
 
