@@ -1,7 +1,7 @@
 """
 Word Occurrences
 Estimate: 40 minutes
-Actual:   xx minutes
+Actual:   45 minutes
 (Estimated time to complete: 30 minutes)
 """
 """
