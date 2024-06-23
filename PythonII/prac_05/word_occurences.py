@@ -2,7 +2,7 @@
 Word Occurrences
 Estimate: 40 minutes
 Actual:   45 minutes
-(Estimated time to complete: 30 minutes)
+(Estimated time to complete: 30 minutes) Still longer than you should take.
 """
 """
 File: word_occurrences.py
