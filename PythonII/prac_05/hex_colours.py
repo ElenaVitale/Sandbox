@@ -25,4 +25,11 @@ COLOUR_CODES = {
     'black': '000000',
 }
 
-print(COLOUR_CODES)
+
+
+def print_colour_names():
+    for name in COLOUR_CODES:
+        print(name.lower())
+
+print("Here is a list of colour names.")
+print_colour_names()
