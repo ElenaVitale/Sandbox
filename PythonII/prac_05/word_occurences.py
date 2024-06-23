@@ -14,9 +14,20 @@ It formats the output so that the numbers are aligned in a nice column.
 word_counts = {}
 # get text from the user
 words = input("Text: ").lower()
-# count, sort the word occurances
 print(words)
 
+
+# count, sort the word occurences
+longest_word_length = 0
+for word in sorted_word_counts:
+
+
+for word in words:
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
+# print (word_counts[word])
 
 
 # format text to look neat
