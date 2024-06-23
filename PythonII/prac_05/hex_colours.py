@@ -26,10 +26,22 @@ COLOUR_CODES = {
 }
 
 
-
 def print_colour_names():
     for name in COLOUR_CODES:
         print(name.lower())
 
-print("Here is a list of colour names.")
-print_colour_names()
+def get_hex_code(colour_name):
+    return COLOUR_CODES.get(colour_name.lower())
+
+colour_name = input("Enter colour name to get hex code: ").lower().strip()
+while colour_name != "":
+    hex_code = get_hex_code(colour_name)
+    if hex_code:
+        print(f"The hexadecimal code for {colour_name} is #{hex_code}.")
+    colour_name = input("Enter colour name to get hex code: ").lower().strip()
+print("Finished. Goodbye")
+
+def main():
+    print("Here is a list of colour names.")
+    print_colour_names()
+
