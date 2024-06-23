@@ -25,13 +25,16 @@ COLOUR_CODES = {
     'black': '000000',
 }
 
+# prints the list of colour names
 def print_colour_names():
     for name in COLOUR_CODES:
         print(name.lower())
 
+# returns the hexadecimal code
 def get_hex_code(colour_name):
     return COLOUR_CODES.get(colour_name.lower())
 
+# gets the colour name
 def get_colour_name():
     colour_name = input("Enter colour name to get hex code: ").lower().strip()
     while colour_name != "":
