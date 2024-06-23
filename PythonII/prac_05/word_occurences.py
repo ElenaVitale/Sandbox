@@ -13,7 +13,12 @@ It formats the output so that the numbers are aligned in a nice column.
 # create a dictionary
 word_counts = {}
 # get text from the user
+words = input("Text: ").lower()
 # count, sort the word occurances
+print(words)
+
+
+
 # format text to look neat
 # print result
 
