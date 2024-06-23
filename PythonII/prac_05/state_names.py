@@ -14,9 +14,14 @@ CODE_TO_NAME = {
     "VIC": "Victoria",
     "TAS": "Tasmania"
 }
-print(CODE_TO_NAME)
 
-state_code = input("Enter short state: ")
+max_code_length = max(len(code) for code in CODE_TO_NAME)
+
+for code, name in CODE_TO_NAME.items():
+    print(f"{code:<{max_code_length}} is {name}")
+
+
+state_code = input("Enter short state: ").upper()
 while state_code != "":
     if state_code in CODE_TO_NAME:
         print(state_code, "is", CODE_TO_NAME[state_code])
